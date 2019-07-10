@@ -1,0 +1,7 @@
+Rule 1: Z_I_ON
+
+SELECT number, "ON" as status,parse_time('HH:mm:ss', timestamp()) as time FROM 'zakkai_itzik_final/telemetry' WHERE number > 25 and number <= 70
+
+Rule 2: Z_I_OFF:
+
+SELECT number, "OFF" as status,parse_time('HH:mm:ss', timestamp()) as time FROM 'zakkai_itzik_final/telemetry' WHERE number > 0 and number <= 25
